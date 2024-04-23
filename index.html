@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en_US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Dice Game</h1>
+            <!--^add image here as part of header or as own thing-->
+        </header>
+        <div id="game-area">
+            <div id="difficulty-select">
+                <!--top of game area-->
+                <!--three difficulties-->
+                <!--normal by default-->
+                <input type="radio" id="easy" name="difficulty" value="Easy">
+                <input type="radio" id="normal" name="difficulty" value="Normal">
+                <input type="radio" id="hard" name="difficulty" value="Hard">
+            </div>
+            <div id="dice-select">
+                <!--images of dice arranged-->
+                <!--selecting one rolls a die-->
+                <button id="btn--d4">D4</button>
+                <button id="btn--d6">D6</button>
+                <button id="btn--d8">D8</button>
+                <button id="btn--d12">D12</button>
+                <button id="btn--d20">D20</button>
+            </div>
+            <div id="results-window">
+                <!--results display here-->
+                <span id="player-score">0</span>
+                <span id="comp-score">0</span>
+                <span id="result-message"></span>
+            </div>
+        </div>
+
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
