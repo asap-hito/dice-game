@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
  * Normal +0
  * Hard -1
  */
-function selectDifficulty() {
+function selectDifficulty(difficultySelect) {
     if (difficultySelect === "Easy"){
         let userResult = userResult+1
     };
@@ -41,7 +41,7 @@ function selectDifficulty() {
 /**
  * Runs 2 random numbers based on DiceSelect
  */
-function playGame() {
+function playGame(diceSelect) {
     if (diceSelect === "D4"){
         let userResult = math.floor(math.random()*4)+1;
         let compResult = math.floor(math.random()*4)+1;
@@ -78,5 +78,16 @@ function checkWin() {
  * Displays win/loss message and both dice results
  */
 function displayResults() {
+    document.getElementById("player-score").textcontent = playerScoreMessage
+    document.getElementById("comp-score").textcontent = compScoreMessage
+    document.getElementById("result-message").textcontent = resultScoreMessage
 
+    let playerScoreMessage = userResult
+    let compScoreMessage = compResult
+    
+    if (win === true){
+        let resultScoreMessage = "You Win!";   
+    } else{
+        let resultScoreMessage = "You Lose.";
+    };
 }
