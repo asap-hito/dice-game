@@ -5,13 +5,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let radio = document.getElementsByTagName("radio");
     
     let buttons = document.getElementsByTagName("button");
-
-    for (let button of butttons){
-        button.addEventListener("click", function(){
-            let diceSelect = this.getAttribute("data-type");
-            alert(`You Chose ${diceSelect}`);
-        })
-    }
 })
 /**
  * Changes difficulty of the game by modifying user results
@@ -20,32 +13,16 @@ document.addEventListener("DOMContentLoaded", function(){
  * Hard -1
  */
 function selectDifficulty(src) {
-    alert(src.value)
+    alert(src.value);
 }
 /**
  * Runs 2 random numbers based on DiceSelect
+ * change playgame(diceselect) to rollDice(src)
+ * add value to dice in html
+ * add activation to html
  */
-function playGame(diceSelect) {
-    if (diceSelect === "D4"){
-        let userResult = math.floor(math.random()*4)+1;
-        let compResult = math.floor(math.random()*4)+1;
-    };
-    if (diceSelect === "D6"){
-        let userResult = math.floor(math.random()*6)+1;
-        let compResult = math.floor(math.random()*6)+1;
-    };
-    if (diceSelect === "D8"){
-        let userResult = math.floor(math.random()*8)+1;
-        let compResult = math.floor(math.random()*8)+1;
-    };
-    if (diceSelect === "D12"){
-        let userResult = math.floor(math.random()*12)+1;
-        let compResult = math.floor(math.random()*12)+1;
-    };
-    if (diceSelect === "D20"){
-        let userResult = math.floor(math.random()*20)+1;
-        let compResult = math.floor(math.random()*20)+1;
-    };
+function rollDice(src) {
+    alert(src.value);
 }
 /**
  * Checks Whether or not the user's result is higher than the computer result
