@@ -6,12 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
     
     let buttons = document.getElementsByTagName("button");
 
-    for (let button of butttons){
-        button.addEventListener("click", function(){
-            let diceSelect = this.getAttribute("data-type");
-            alert(`You Chose ${diceSelect}`);
-        })
-    }
 })
 /**
  * Changes difficulty of the game by modifying user results
@@ -31,8 +25,8 @@ function selectDifficulty(src) {
 function rollDice(src) {
     alert(src.value);
     let dice=(src.value);
-    let userRoll=math.floor(math.random()*dice)+1;
-    let compRoll=math.floor(math.random()*dice)+1;
+    let userRoll=Math.floor(Math.random()*dice)+1;
+    let compRoll=Math.floor(Math.random()*dice)+1;
     console.log(userRoll, compRoll)
 }
 /**
