@@ -3,13 +3,6 @@ document.addEventListener("DOMContentLoaded", function(){
     //need to actually test this in virtual environment
     //test mode only
     let radio = document.getElementsByTagName("radio");
-
-    for (let radio of radios){
-        radio.addEventListener("click", function(){
-            let difficultySelect = this.getAttribute("data-type");
-            alert(`You Chose ${difficultySelect}`);
-        })
-    }
     
     let buttons = document.getElementsByTagName("button");
 
@@ -26,17 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
  * Normal +0
  * Hard -1
  */
-function selectDifficulty(difficultySelect) {
-    if (difficultySelect === "Easy"){
-        let userResult = userResult+1
-    };
-    if (difficultySelect === "Normal"){
-        let userResult = userResult
-    };
-    if (difficultySelect === "Hard"){
-        let userResult = userResult-1
-    };
-
+function selectDifficulty(src) {
+    alert(src.value)
 }
 /**
  * Runs 2 random numbers based on DiceSelect
