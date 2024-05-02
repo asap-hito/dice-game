@@ -25,7 +25,7 @@ function selectDifficulty(src) {
 function rollDice(src) {
     alert(src.value);
     let dice=(src.value);
-    let userRoll=Math.floor(Math.random()*dice)+1;
+    let userRoll=(getrandomint(dice)+1);
     let compRoll=Math.floor(Math.random()*dice)+1;
     console.log(userRoll, compRoll)
 }
