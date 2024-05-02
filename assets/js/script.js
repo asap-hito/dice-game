@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
     let radio = document.getElementsByTagName("radio");
     
     let buttons = document.getElementsByTagName("button");
+
+    for (let button of butttons){
+        button.addEventListener("click", function(){
+            let diceSelect = this.getAttribute("data-type");
+            alert(`You Chose ${diceSelect}`);
+        })
+    }
 })
 /**
  * Changes difficulty of the game by modifying user results
@@ -13,16 +20,20 @@ document.addEventListener("DOMContentLoaded", function(){
  * Hard -1
  */
 function selectDifficulty(src) {
-    alert(src.value);
+    alert(src.value)
 }
 /**
  * Runs 2 random numbers based on DiceSelect
- * change playgame(diceselect) to rollDice(src)
+ * change playgame(diceselect) to playgame(src)
  * add value to dice in html
  * add activation to html
  */
 function rollDice(src) {
     alert(src.value);
+    let dice=(src.value);
+    let userRoll=math.floor(math.random()*dice)+1;
+    let compRoll=math.floor(math.random()*dice)+1;
+    console.log(userRoll, compRoll)
 }
 /**
  * Checks Whether or not the user's result is higher than the computer result
