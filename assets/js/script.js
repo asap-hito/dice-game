@@ -28,6 +28,7 @@ function rollDice(src) {
     let userRoll=Math.floor(Math.random()*dice)+1;
     let compRoll=Math.floor(Math.random()*dice)+1;
     console.log(userRoll, compRoll)
+    return(userRoll, compRoll)
 }
 /**
  * Checks Whether or not the user's result is higher than the computer result
