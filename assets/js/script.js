@@ -32,12 +32,14 @@ function rollDice(src) {
 /**
  * Checks Whether or not the user's result is higher than the computer result
  */
-function checkWin() {
+function checkWin(userResult, compResult) {
     if (userResult >= compResult){
         let win = true;
+        alert("You Win!");
     };
     if (compResult > userResult){
         let win = false;
+        alert("You Lose!");
     };
 }
 /**
@@ -57,3 +59,8 @@ function displayResults() {
         let resultScoreMessage = "You Lose.";
     };
 }
+
+let userResult = userRoll
+let compResult = compRoll
+checkWin()
+displayResults()
