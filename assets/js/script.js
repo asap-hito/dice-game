@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 let userRoll=0
 let compRoll=0
-let playerScoreMessage=0
-let compScoreMessage=0
+let playerScoreMessage=playerResult
+let compScoreMessage=compResult
 
 
 /**
