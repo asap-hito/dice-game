@@ -11,7 +11,7 @@ let userRoll=0
 let compRoll=0
 let userResult = userRoll
 let compResult = compRoll
-let playerScoreMessage=playerResult
+let playerScoreMessage=userResult
 let compScoreMessage=compResult
 
 /**
