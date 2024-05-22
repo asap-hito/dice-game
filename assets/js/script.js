@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 let userRoll=0
 let compRoll=0
+let userResult = userRoll
+let compResult = compRoll
 let playerScoreMessage=playerResult
 let compScoreMessage=compResult
-
 
 /**
  * Changes difficulty of the game by modifying user results
@@ -64,7 +65,6 @@ function displayResults() {
     };
 }
 
-let userResult = userRoll
-let compResult = compRoll
+
 checkWin()
 displayResults()
