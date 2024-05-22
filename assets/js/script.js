@@ -7,28 +7,30 @@ document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.getElementsByTagName("button");
 
 })
+let userRoll=0
+let compRoll=0
+
+
 /**
  * Changes difficulty of the game by modifying user results
  * Easy +1
  * Normal +0
  * Hard -1
- */
+ --not ready--
 function selectDifficulty(src) {
     alert(src.value)
 }
+*/
+
 /**
- * Runs 2 random numbers based on DiceSelect
- * change playgame(diceselect) to playgame(src)
- * add value to dice in html
- * add activation to html
+ * Key game functionality to determine seperate rolls
  */
 function rollDice(src) {
-    alert(src.value);
     let dice=(src.value);
     let userRoll=Math.floor(Math.random()*dice)+1;
     let compRoll=Math.floor(Math.random()*dice)+1;
-    console.log(userRoll, compRoll)
-    return(userRoll, compRoll)
+    console.log(userRoll, compRoll);
+    return(userRoll, compRoll);
 }
 /**
  * Checks Whether or not the user's result is higher than the computer result
