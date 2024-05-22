@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 let userRoll=0
 let compRoll=0
+let playerScoreMessage=0
+let compScoreMessage=0
 
 
 /**
@@ -53,8 +55,7 @@ function displayResults() {
     document.getElementById("comp-score").textcontent = compScoreMessage
     document.getElementById("result-message").textcontent = resultScoreMessage
 
-    let playerScoreMessage = userResult
-    let compScoreMessage = compResult
+
     
     if (win === true){
         let resultScoreMessage = "You Win!";   
