@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //test mode only
     let radio = document.getElementsByTagName("radio");
     
-    let button = document.getElementsByTagName("button");
+    let buttons = document.getElementsByTagName("button");
 
 })
 let userRoll=0
@@ -14,6 +14,7 @@ let compResult = compRoll
 let playerScoreMessage=userResult
 let compScoreMessage=compResult
 let win = false
+let dice = 0
 
 
 /**
@@ -30,8 +31,7 @@ function selectDifficulty(src) {
 /**
  * Key game functionality to determine seperate rolls
  */
-function rollDice(src) {
-    let dice=(src.value);
+function rollDice(dice) {
     let userRoll=Math.floor(Math.random()*dice)+1;
     let compRoll=Math.floor(Math.random()*dice)+1;
     return(userRoll, compRoll);
@@ -68,7 +68,10 @@ function displayResults() {
     };
 }
 
-button.addEventListener("click");
-rollDice(src);
-checkWin(userResult, compResult);
-console.log(userResult, compResult, playerScoreMessage, compScoreMessage, win)
+function playGame(src) {
+    let dice = src.value;
+    rollDice(dice);
+    checkWin(userResult, compResult);
+    console.log(userResult, compResult, playerScoreMessage, compScoreMessage, win)
+
+}
