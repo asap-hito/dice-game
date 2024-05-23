@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //test mode only
     let radio = document.getElementsByTagName("radio");
     
-    let buttons = document.getElementsByTagName("button");
+    let button = document.getElementsByTagName("button");
 
 })
 let userRoll=0
@@ -35,6 +35,7 @@ function rollDice(dice) {
     let userRoll=Math.floor(Math.random()*dice)+1;
     let compRoll=Math.floor(Math.random()*dice)+1;
     return(userRoll, compRoll);
+    console.log(userRoll, compRoll);
 }
 /**
  * Checks Whether or not the user's result is higher than the computer result
@@ -43,12 +44,10 @@ function checkWin(userResult, compResult) {
     if (userResult >= compResult){
         let win = true;
         return win;
-        alert("You Win!");
     };
     if (compResult > userResult){
         let win = false;
         return win;
-        alert("You Lose!");
     };
 }
 /**
@@ -70,6 +69,7 @@ function displayResults() {
 
 function playGame(src) {
     let dice = src.value;
+    console.log(dice);
     rollDice(dice);
     checkWin(userResult, compResult);
     console.log(userResult, compResult, playerScoreMessage, compScoreMessage, win)
