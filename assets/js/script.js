@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //test mode only
     let radio = document.getElementsByTagName("radio");
     
-    let buttons = document.getElementsByTagName("button");
+    let button = document.getElementsByTagName("button");
 
 })
 let userRoll=0
