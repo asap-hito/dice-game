@@ -13,6 +13,7 @@ let userResult = userRoll
 let compResult = compRoll
 let playerScoreMessage=userResult
 let compScoreMessage=compResult
+let win = false
 
 /**
  * Changes difficulty of the game by modifying user results
@@ -41,10 +42,12 @@ function rollDice(src) {
 function checkWin(userResult, compResult) {
     if (userResult >= compResult){
         let win = true;
+        return win;
         alert("You Win!");
     };
     if (compResult > userResult){
         let win = false;
+        return win;
         alert("You Lose!");
     };
 }
@@ -67,4 +70,4 @@ function displayResults() {
 
 
 checkWin()
-displayResults()
+console.log(userResult, compResult, playerScoreMessage, compScoreMessage, win)
